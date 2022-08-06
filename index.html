@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <!-- Contenedor para el layout de la pagina -->
+        <!-- En realidad no se necesita por que el header y el footer estan vacios, pero por buenas practicas... -->
+        
+        <header></header>
+
+        <main>
+            <!-- Seccion principal -->
+            <div class="contenedor_form">
+                <!-- Contenedor utilizado para el layout del formulario -->
+                <form action="" method="">
+                    <!-- Formulario -->
+                    <fieldset> 
+                        <!-- Seccion del formulario para los datos personales -->
+                        <legend> Datos Personales </legend>
+
+                        <label for="ID">Documento de Identificación
+                            <input type="number" id="ID" name="ID" placeholder="Numero de ID" required>
+                        </label>
+
+                        <label for="Nombre">Nombre
+                            <input type="text" id="Nombre" name="Nombre" placeholder="Nombre Completo" required>
+                        </label>
+
+                        <label for="Dirección">Dirección
+                            <input type="text" id="Dirección" name="Dirección" placeholder="Direccion">
+                        </label>
+
+                        <label for="Pais">Pais
+                            <input type="text" id="Pais" name="Pais" placeholder="Pais">
+                        </label>
+
+                        <label for="E-Mail">E-Mail
+                            <input type="email" id="E-Mail" name="E-Mail" placeholder="Ingrese un E-mail Valido" required>
+                        </label>
+
+                        <label for="Observaciones">Observaciones
+                            <textarea name="Observaciones" id="Observaciones" rows="4"></textarea>
+                        </label>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <!-- Seccion del formulario para los datos laborales -->
+                        <legend> Datos Laborales </legend>
+
+                        <label for="Empresa"> 
+                            <input type="text" id="Empresa" name="Empresa" placeholder="Nombre de la empresa">
+                        </label>
+
+                        <label for="SueldoOrdinario"> Sueldo ordinario
+                            <input type="number" id="SueldoOrdinario" name="SueldoOrdinario" placeholder="Sueldo sin bonificaciones">
+                        </label>
+
+                        <label for="Bonificacion"> Bonificacion
+                            <input type="number" id="Bonificacion" name="Bonificacion" placeholder="Bonificaciones">
+                        </label>
+
+                        <label for="OtrasBonificaciones"> Otras Bonificaciones
+                            <input type="number" id="OtrasBonificaciones" name="OtrasBonificaciones" placeholder="Bonificaciones adicionales">
+                        </label>
+                    </fieldset>
+
+                    <label for="submit">
+                        <input type="submit" id="submit" name="submit" value="Enviar Datos">
+                    </label>
+                </form>
+            </div>
+        </main>
+
+        <footer></footer>
+    </div>
+</body>
+
+</html>

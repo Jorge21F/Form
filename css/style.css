@@ -1,0 +1,80 @@
+body {
+    background-color: gainsboro;
+}
+
+/* Layout de la pagina */
+.contenedor {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+/* Establece el area que ocuparan en el layout de la pagina */
+header {grid-area: header;}
+main { grid-area: main; }
+footer {grid-area: footer;}
+
+/* Le da un margin a las secciones del formulario */
+fieldset {
+    margin: 20px;
+}
+
+/* Centra y aplica negrita a los titulos de seccion de formulario */
+fieldset legend {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Presenta el formulario con un grid de 2 columnas, una para descripcion y otra para su llenado */
+.contenedor_form label {
+    padding: 2px;
+    border: solid black 0.5px;
+    border-collapse: collapse;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Cambia el color de los placeholder */
+input::placeholder {
+    color: blue;
+}
+
+/* A los placeholder de la informacion que es obligaoria se le da un color rojo */
+input:required::placeholder {
+    color:red;
+}
+
+/* Hace que el input para empresa ocupe las 2 columnas */ 
+input[id=Empresa] {
+    grid-column: span 2;
+}
+
+/* Cambia los estilos del submit y lo coloca en la segunda columna*/
+input[type=submit] {
+    grid-column: 2;
+    margin-right: 20px;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+
+/* Elimina el borde del submit */
+label[for=submit] {
+    border: 0px;
+}
+
+/* Al colocar el mouse sobre el submit, este cambia de color */
+input[type=submit]:hover {
+    background-color: red;
+}
+
+/* MediaQuerie para que, en pantallas pequeñas, el formulario se presente en una sola columna */
+@media screen and (max-width: 760px) {
+    .contenedor form label {
+        grid-template-columns: 1fr;
+    }
+}
