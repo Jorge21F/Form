@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background-color: gainsboro;
 }
@@ -10,6 +15,7 @@ body {
         "main"
         "footer"
     ;
+    margin: auto 10%;
 }
 
 /* Establece el area que ocuparan en el layout de la pagina */
@@ -20,12 +26,14 @@ footer {grid-area: footer;}
 /* Le da un margin a las secciones del formulario */
 fieldset {
     margin: 20px;
+    padding: 20px;
 }
 
 /* Centra y aplica negrita a los titulos de seccion de formulario */
 fieldset legend {
     text-align: center;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 /* Presenta el formulario con un grid de 2 columnas, una para descripcion y otra para su llenado */
@@ -74,6 +82,9 @@ input[type=submit]:hover {
 
 /* MediaQuerie para que, en pantallas pequeñas, el formulario se presente en una sola columna */
 @media screen and (max-width: 760px) {
+    .contenedor {
+        margin: auto;
+    }
     .contenedor form label {
         grid-template-columns: 1fr;
     }
